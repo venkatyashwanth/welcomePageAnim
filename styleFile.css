@@ -95,12 +95,14 @@ html{
     }
 */
     .menuIcon{
-        transition: 1s;
+        transition: 0.4s;
+        transform-style: preserve-3d;
         font-size: 68px;
         cursor: pointer;
     }
 
-    .menuIcon:hover{
+    .menuIcon:hover,
+    .menuIcon:focus{
         transform: rotateY(180deg);
     }
      
@@ -217,7 +219,6 @@ html{
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
@@ -727,9 +728,9 @@ html{
     .lineIcon{
         width: 100px;
     }
-    .printCard{
-        max-width: 400px;
-        height: 382px;
+    /* .printCard{
+       
+        
         border: 1px solid black;
         padding: 30px;
         padding-top: 84px;
@@ -737,7 +738,66 @@ html{
         border: 0;
         position: relative;
         box-shadow: 0px 53px 73px #232d3c2f;
-    }
+    } */
+
+
+    
+    /* dsfasf */
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 382px;
+    perspective: 1000px;
+  }
+  .flip-card-front {
+    background-color: #FAFAFA;
+    color: black;
+  }
+  .printCard{
+    padding: 40px;
+    padding-top: 84px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    box-shadow: 0px 53px 73px #232d3c2f;;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+    /* dsfasf */
+
+
+
+
+
+
+
+
+
+
+
     .pcardImg{
         position: absolute;
         top: 0;
@@ -790,13 +850,14 @@ html{
         display: flex;
         justify-content: flex-end;
     }
-    .loginButton::after{
+    /* .loginButton::after{
         content: "\e909";
         font-family: "icomoon";
         color: white;
         font-size: 6.8rem;
         cursor: pointer;
-    }
+    } */
+
     .loginButton{
         display: flex;
         align-items: center;
@@ -821,6 +882,17 @@ html{
         color: #ffffff;
         font-family: "Poppins";
         font-size: 1.8rem;
+    }
+    .menuIcon{
+        transition: 0.4s;
+        transform-style: preserve-3d;
+        font-size: 68px;
+        cursor: pointer;
+    }
+
+    .menuIcon:hover,
+    .menuIcon:focus{
+        transform: rotateY(180deg);
     }
 
     .signupBtnStyl{
@@ -847,12 +919,27 @@ html{
         align-items: center;
         margin-top: 30px;
     }
-    
+
+
     .lapCont{
-        margin-top: 80px;
         position: relative;
+        margin-top: 80px;
         margin-bottom: 98px;
+        animation-name: lapexample;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
     }
+
+    @keyframes lapexample {
+        0%{top: 0px;}
+        50%{top: 20px}
+        100%{top: 0px}
+    }
+
     .lappyImg{
         width: 380px;
     }
@@ -885,7 +972,7 @@ html{
         margin-top: 90px;
         margin-bottom: 118px;
     } 
-
+/* 
     .printCard{
         max-width: 390px;
         height: 382px;
@@ -896,11 +983,63 @@ html{
         border: 0;
         position: relative;
         box-shadow: 0px 53px 73px #232d3c2f;
-    }
+    } */
 
-    .prCard{
+
+    /* asdfas */
+
+.flip-card {
+    background-color: transparent;
+    width: 415px;
+    height: 382px;
+    perspective: 1000px;
+  }
+  .flip-card-front {
+    background-color: #FAFAFA;
+    color: black;
+  }
+  .printCard{
+    padding: 40px;
+    padding-top: 84px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    box-shadow: 0px 53px 73px #232d3c2f;;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+    /* asdfa */
+    .first-card{
         margin-bottom: 86px;
-    } 
+    }
+    /* .prCard{
+        margin-bottom: 86px;
+    }  */
 
     .pcardTitle{
         color: #504450;
@@ -1070,6 +1209,7 @@ html{
         background-color: #2AFAC2;
         width: 321px;
     }
+    
     .linkBtnTyp{
         margin-top: 26px;
         margin-bottom: 73px;
@@ -1079,14 +1219,20 @@ html{
         border: none;
         border-radius: 25px;
         color: #311A8B;
-        background-image: linear-gradient(to right, #39B2B7,#45E2FF);
+        background-image: linear-gradient(to right, #39B2B7,#45E2FF,#45E2FF,#39B2B7);
+        background-size: 300%;
+        background-position: left;
         font-family: "Poppins";
         font-size: 1.8rem;
         cursor: pointer;
+        transition: background-position 1s;
     }
+
     .linkBtnTyp:hover{
-        background-image: linear-gradient(to left, #39B2B7,#45E2FF);
+        background-position: right;
     }
+
+
 
     .footer-content{
         margin:auto;
@@ -1198,8 +1344,11 @@ html{
         font-size: 1.6rem;
     }
 
+    .linkList li a:hover{
+        color: #FA3B6E;
+    }
+
     .linkList li:hover{
-        padding-left: 4px;
         list-style-type: "\1F449";
     }
 
@@ -1358,13 +1507,25 @@ html{
         display: flex;
         justify-content: flex-end;
     }
-    .loginButton::after{
+    .menuIcon{
+        transition: 0.4s;
+        transform-style: preserve-3d;
+        font-size: 58px;
+        cursor: pointer;
+    }
+
+    .menuIcon:hover,
+    .menuIcon:focus{
+        transform: rotateY(180deg);
+    }
+     
+    /* .loginButton::after{
         content: "\e909";
         font-family: "icomoon";
         color: white;
         font-size: 5.2rem;
         cursor: pointer;
-    }
+    } */
     /* .btnStyle{
         border: none;
         border-radius: 25px;
@@ -1378,8 +1539,8 @@ html{
     .btnStyle{
         border: none;
         border-radius: 25px;
-        padding: 10px;
-        width: 110px;
+        padding: 8px;
+        width: 100px;
         color: #ffffff;
         font-family: "Poppins";
         font-size: 1.8rem;
@@ -1425,10 +1586,30 @@ html{
     .lappyImg{
         width: 200px;
     }
-    .lapCont{
+    /* .lapCont{
         margin-top: 80px;
         position: relative;
+    } */
+
+    .lapCont{
+        position: relative;
+        margin-bottom: 98px;
+        margin-top: 80px;
+        animation-name: lapexample;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
     }
+
+    @keyframes lapexample {
+        0%{top: 0px;}
+        50%{top: 20px}
+        100%{top: 0px}
+    }
+
     .lineIcon{
         position: absolute;
         top: 0px;
@@ -1458,7 +1639,7 @@ html{
         margin-bottom: 118px;
     } 
 
-    .printCard{
+    /* .printCard{
         max-width: 300px;
         height: 300px;
         border: 1px solid black;
@@ -1468,6 +1649,57 @@ html{
         border: 0;
         position: relative;
         box-shadow: 0px 53px 73px #232d3c2f;
+    } */
+
+    /* dasfasd */
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  .flip-card-front {
+    background-color: #FAFAFA;
+    color: black;
+  }
+  .printCard{
+    padding: 40px;
+    padding-top: 84px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    box-shadow: 0px 53px 73px #232d3c2f;;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+    /* asdfa */
+    .first-card{
+        margin-bottom: 86px;
     }
 
     .prCard{
@@ -1646,7 +1878,7 @@ html{
         width: 285px;
     }
 
-
+    /* afdad */
 
     .linkBtnTyp{
         margin-top: 26px;
@@ -1657,15 +1889,20 @@ html{
         border: none;
         border-radius: 25px;
         color: #311A8B;
-        background-image: linear-gradient(to right, #39B2B7,#45E2FF);
+        background-image: linear-gradient(to right, #39B2B7,#45E2FF,#45E2FF,#39B2B7);
+        background-size: 300%;
+        background-position: left;
         font-family: "Poppins";
         font-size: 1.4rem;
         cursor: pointer;
+        transition: background-position 1s;
     }
 
     .linkBtnTyp:hover{
-        background-image: linear-gradient(to left, #39B2B7,#45E2FF);
+        background-position: right;
     }
+    /* adfa */
+
 
 
     .footer-content{
@@ -1775,8 +2012,12 @@ html{
         font-size: 1.2rem;
     }
 
+    .linkList li a:hover{
+        color: #FA3B6E;
+    }
+
     .linkList li:hover{
-        padding-left: 4px;
+        
         list-style-type: "\1F449";
     }
 
